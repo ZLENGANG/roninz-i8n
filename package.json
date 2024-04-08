@@ -15,6 +15,7 @@
     "packages/vue3"
   ],
   "dependencies": {
-    "commander": "^2.18.0"
+    "commander": "^2.18.0",
+    "inquirer": "^6.2.2"
   }
 }
