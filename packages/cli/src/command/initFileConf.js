@@ -1,5 +1,7 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
+const vueOptions = require("../utils/vueOptions");
+const prettier = require("prettier");
 
 async function doInquire() {
   let isConfigFileExist = true;
@@ -44,5 +46,21 @@ async function doInquire() {
 
 module.exports = async function initFileConf(isVue) {
   const answers = await doInquire();
-  console.log(answers, "zlzzl answers");
+  const { localePath = "locals", firstI18n } = answers;
+  const defaultOpts = vueOptions;
+  const options = {
+    ...defaultOpts,
+    localeConf: { type: "file", folder: localePath },
+  };
+
+  // 创建配置文件
+  fs.writeFileSync(
+    "./roninz-i18n.config.js",
+    prettier.format("module.exports = " + JSON.stringify(options), {
+      parser: "babel",
+      singleQuote: true,
+      trailingComma: "es5",
+    }),
+    "utf8"
+  );
 };

@@ -1,0 +1,17 @@
+module.exports = {
+  entry: ['src'],
+  exclude: [],
+  output: ['src'],
+  disableAutoTranslate: true,
+  extractOnly: false,
+  translator: null,
+  ignoreComponents: [],
+  ignoreMethods: [],
+  primaryLocale: 'zh-CN',
+  supportedLocales: ['zh-CN', 'en-US'],
+  importCode: "import { intl } from 'di18n-vue';",
+  i18nObject: 'intl',
+  i18nMethod: '$t',
+  prettier: null,
+  localeConf: { type: 'file', folder: 'locals' },
+};
