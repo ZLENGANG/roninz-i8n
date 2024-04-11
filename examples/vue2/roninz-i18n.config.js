@@ -13,5 +13,5 @@ module.exports = {
   i18nObject: 'intl',
   i18nMethod: '$t',
   prettier: null,
-  localeConf: { type: 'file', folder: 'locals' },
+  localeConf: { type: 'file', folder: 'locales' },
 };
