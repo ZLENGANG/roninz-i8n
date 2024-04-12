@@ -3,6 +3,7 @@
     <div>这是vue2-template 0.1.1</div>
     <div title="哈哈哈哈">这是span</div>
     <div>这个人叫做 {{ name }}</div>
+    <div>今年25</div>
   </div>
 </template>
 
